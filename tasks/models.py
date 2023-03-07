@@ -16,7 +16,7 @@ class Task(models.Model):
     )
     assignee = models.ForeignKey(
         User,
-        null=True,
         related_name="tasks",
         on_delete=models.CASCADE,
+        null=True,
     )
