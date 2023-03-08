@@ -11,7 +11,7 @@ def create_task(request):
     if request.method == "POST":
         form = CreateTask(request.POST)
         if form.is_valid:
-            task = form.save()
+            form.save()
 
             return redirect("list_projects")
     else:
